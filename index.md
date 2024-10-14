@@ -1,7 +1,6 @@
 ---
-title: Aidan's Website
+title: Aidan Houck - Home
 subtitle: My cool website generated using Pandoc
-author: Aidan Houck
 date: 2024-10-14
 ---
 
