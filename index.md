@@ -2,11 +2,10 @@
 title: Aidan's Website
 subtitle: My cool website generated using Pandoc
 author: Aidan Houck
-toc-title: Contents
 date: 2024-10-14
 ---
 
-# Test
+# My Website
 This is a test. I just need to add some filler content here to really get it looking like a normal-_ish_ website. That way I can start to style CSS and all that good stuff. **Bold** text in Markdown syntax works with just two asterisks. 
 
 <details>
@@ -60,3 +59,5 @@ Inline code for elements like <code>html</code> and <code>body</code> should wor
    \/__/               \/__/     \/__/
 </pre>
 
+# Another H1 heading
+How does this look?

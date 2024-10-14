@@ -17,5 +17,5 @@ postprocess:
 	rm -f $(TEMP_DIR)/*.html
 
 index.html: index.md $(TEMP_DIR)/$(MASTER_TEMPLATE)
-	pandoc -s --toc --css css/style.css -i $< -o $@ --template=$(TEMP_DIR)/$(MASTER_TEMPLATE)
+	pandoc -s --toc -i $< -o $@ --template=$(TEMP_DIR)/$(MASTER_TEMPLATE)
 

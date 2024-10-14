@@ -6,6 +6,7 @@
 		<meta name="generator" content="pandoc">
 		<title>$title$</title>
 
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.11.2">
 		$for(css)$
 		<link rel="stylesheet" href="$css$">
 		$endfor$
@@ -16,19 +17,16 @@
 		__header.html__
 
 		<!-- table of contents -->
+		<main>
 		$if(toc)$
-		<aside>
-			<nav id=$idprefix$TOC" role="doc-toc">
-			$if(toc-title)$
-			<h2 id=$idprefix$toc-title">$toc-title$</h2>
-			$endif$
+		<nav id=TOC role="doc-toc">
 			$table-of-contents$
-			</nav>
-		</aside>
+		</nav>
 		$endif$
 
 		<!-- insert body text -->
 		$body$
+		</main>
 
 		<!-- bottom of page footer -->
 		<footer>
