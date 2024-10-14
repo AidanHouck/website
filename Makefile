@@ -1,10 +1,21 @@
-template = templates/master.html
+TEMP_DIR = .tmp
 
-all: index.html
+TEMPLATE_DIR = templates
+MASTER_TEMPLATE = master.html
+ALL_TEMPLATES = templates/*.html
+
+all: preprocess index.html postprocess
 
 clean:
-	rm -f index.html
+	rm -f index.html $(TEMP_DIR)/*.html
 
-index.html: index.md $(template)
-	pandoc -s --toc --css css/style.css -i $< -o $@ --template=$(template)
+preprocess: $(ALL_TEMPLATES)
+	cp $(TEMPLATE_DIR)/$(MASTER_TEMPLATE) $(TEMP_DIR)/$(MASTER_TEMPLATE)
+	sed -e '/__header.html__/ {' -e 'r templates/header.html' -e 'd' -e '}' -i $(TEMP_DIR)/$(MASTER_TEMPLATE)
+
+postprocess:
+	rm -f $(TEMP_DIR)/*.html
+
+index.html: index.md $(TEMP_DIR)/$(MASTER_TEMPLATE)
+	pandoc -s --toc --css css/style.css -i $< -o $@ --template=$(TEMP_DIR)/$(MASTER_TEMPLATE)
 
