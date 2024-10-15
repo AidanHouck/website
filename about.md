@@ -22,5 +22,5 @@ This website is primarily styled using Evgeny Orekhov's [holiday.css](https://gi
 
 It is generated dynamically from Markdown files using [Pandoc](https://pandoc.org) and a [GNU Make](https://gnu.org/software/make) script.
 
-You can view the source code [on my GitHub](https://github.com/AidanHouck/website). 
+You also can view the source code [on my GitHub](https://github.com/AidanHouck/website). 
 
