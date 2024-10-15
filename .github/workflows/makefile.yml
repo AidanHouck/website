@@ -21,5 +21,28 @@ jobs:
       run: mkdir .tmp
 
     - name: Make prod
+      id: build
       run: make PROD=1
+
+    - name: Upload static artifacts
+      id: deployment
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: |
+          ./*.html
+          blogs/*.html
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
