@@ -11,6 +11,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: build
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Create folder
+      run: mkdir .tmp
+
+    - name: Make prod
       run: make PROD=1
+
