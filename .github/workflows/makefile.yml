@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Pull Pandoc dependency
+      uses: docker://pandoc/core:2.9
+
     - name: Checkout
       uses: actions/checkout@v4
 
