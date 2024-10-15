@@ -16,7 +16,7 @@ Below is a list of all blogs in reverse-chronological order.
 
 <article>
 	<h2>
-		<a href="blogs/2024-10-14-hello_world.html">
+		<a href="/blogs/2024-10-14-hello_world.html">
 			Hello World
 		</a>
 	</h2>
@@ -27,7 +27,7 @@ Below is a list of all blogs in reverse-chronological order.
 </article>
 <article>
 	<h2>
-		<a href="blogs/2024-10-14-hello_world.html">
+		<a href="/blogs/2024-10-14-hello_world.html">
 			Hello World
 		</a>
 	</h2>
