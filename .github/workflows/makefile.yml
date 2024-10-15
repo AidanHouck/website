@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Pull Pandoc dependency
-      uses: docker://pandoc/core:2.9
+    - name: Checkout branch
+      uses: actions/checkout@main
 
-    - name: Checkout
-      uses: actions/checkout@v4
+    - name: Install Pandoc dependency
+      uses: nikeee/setup-pandoc@v1
 
     - name: Create folder
       run: mkdir .tmp
