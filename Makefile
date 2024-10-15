@@ -2,6 +2,7 @@
 TEMP_DIR = .tmp
 TEMPLATE_DIR = templates
 BLOG_DIR = blogs
+OUT_DIR = _site
 
 # Files to reference
 MASTER_TEMPLATE = master.html
@@ -20,6 +21,7 @@ all: preprocess $(ALL_HTML) postprocess
 # based off of that. 
 .PHONY: preprocess
 preprocess: $(ALL_TEMPLATES)
+	mkdir -p "$(TEMP_DIR)" "$(OUT_DIR)" "$(OUT_DIR)/$(BLOG_DIR)"
 	cp $(TEMPLATE_DIR)/$(MASTER_TEMPLATE) $(TEMP_DIR)/$(MASTER_TEMPLATE)
 	sed -e '/__header.html__/ {' -e 'r $(TEMPLATE_DIR)/header.html' -e 'd' -e '}' -i $(TEMP_DIR)/$(MASTER_TEMPLATE)
 	sed -e '/__footer.html__/ {' -e 'r $(TEMPLATE_DIR)/footer.html' -e 'd' -e '}' -i $(TEMP_DIR)/$(MASTER_TEMPLATE)
@@ -38,12 +40,12 @@ endif
 # If a nested dir, run using the secondary template with fixed local file paths.
 $(ALL_HTML): %.html: %.md
 	@if [ "$(@D)" = "." ]; then \
-		pandoc -s --toc -i $< -o $@ --template=$(TEMP_DIR)/$(MASTER_TEMPLATE); \
+		pandoc -s --toc -i $< -o $(OUT_DIR)/$@ --template=$(TEMP_DIR)/$(MASTER_TEMPLATE); \
 	else \
-		pandoc -s --toc -i $< -o $@ --template=$(TEMP_DIR)/$(MASTER_NEST_TEMPLATE); \
+		pandoc -s --toc -i $< -o $(OUT_DIR)/$@ --template=$(TEMP_DIR)/$(MASTER_NEST_TEMPLATE); \
 	fi
 ifndef PROD
-	sed 's/a href="\//a href="/' -i $@
+	sed 's/a href="\//a href="/' -i $(OUT_DIR)/$@
 endif
 
 # Cleanup temp dir
@@ -54,5 +56,5 @@ postprocess:
 # Cleanup anything that was generated
 .PHONY: clean
 clean:
-	rm -f *.html $(BLOG_DIR)/*.html $(TEMP_DIR)/*.html
+	rm -f $(OUT_DIR)/*.html $(OUT_DIR)/$(BLOG_DIR)/*.html $(TEMP_DIR)/*.html
 
