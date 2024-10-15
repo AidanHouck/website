@@ -1,9 +1,0 @@
-/* Heavily inspired by "Web Design in 4 minutes" by Jeremy Thomas */
-/* https://jgthms.com/web-design-in-4-minutes/ */
-
-body {
-	font-family: "Arial", sans-serif;
-
-	margin: 0 auto;
-	max-width: 50em;
-}
