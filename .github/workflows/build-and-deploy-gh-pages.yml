@@ -11,21 +11,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout branch
+    - name: Checkout repository
       uses: actions/checkout@main
 
     - name: Install Pandoc dependency
       uses: nikeee/setup-pandoc@v1
 
-    - name: Create folder
-      run: mkdir .tmp
-
-    - name: Make prod
-      id: build
+    - name: Compile markdown into HTML using make
       run: make PROD=1
 
     - name: Upload static artifacts
-      id: deployment
       uses: actions/upload-pages-artifact@v3
       with:
         path: _site/
@@ -41,6 +36,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
 
