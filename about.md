@@ -1,10 +1,10 @@
 ---
 title: Aidan Houck - About
-subtitle: About Me
+subtitle: Me, Myself, and I
 date: 2024-10-14
 ---
 
-# Contact
+# Contact {.unlisted}
 My name is Aidan. You can find me at the following places:
 <ul>
 	<li>
@@ -17,7 +17,7 @@ My name is Aidan. You can find me at the following places:
 
 For any questions, comments, or concerns feel free to reach out via email: cont<!--abc-->act@aidanh<!--xyz-->ouck.<!--123-->com.
 
-# Website
+# Website {.unlisted}
 This website is primarily styled using Evgeny Orekhov's [holiday.css](https://github.com/EvgenyOrekhov/holiday.css) theme.
 
 It is generated dynamically from Markdown files using [Pandoc](https://pandoc.org) and a [GNU Make](https://gnu.org/software/make) script.
