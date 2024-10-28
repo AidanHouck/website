@@ -16,14 +16,11 @@ Below is a list of all blogs in reverse-chronological order.
 
 <article>
 	<h2>
-		<a href="/blogs/2024-10-14-hello_world.html">
-			Hello World
+		<a href="/blogs/2024-10-27-diy_porkbun_ddns.html">
+			DIY Porkbun Dynamic DNS
 		</a>
 	</h2>
-	<p><time datetime="2024-10-14">October 14th, 2024</time></p>
-	<p>
-		Hello world, this is a test blog post for formatting purposes.
-	</p>
+	<p><time datetime="2024-10-27">October 27th, 2024</time></p>
 </article>
 <article>
 	<h2>
@@ -32,9 +29,6 @@ Below is a list of all blogs in reverse-chronological order.
 		</a>
 	</h2>
 	<p><time datetime="2024-10-14">October 14th, 2024</time></p>
-	<p>
-		Hello world, this is a test blog post for formatting purposes.
-	</p>
 </article>
 
 
