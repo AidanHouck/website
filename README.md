@@ -14,3 +14,12 @@ make PROD=1
 make clean
 ```
 
+### Building with WSL
+If using WSL for development you cannot follow the symlink that is automatically created for images without hosting a local server. This can be done quickly with Python:
+```
+cd _site/
+python3 -m http.server
+```
+
+Then connect in a browser to `localhost:8000`
+
