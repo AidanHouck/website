@@ -16,6 +16,14 @@ Below is a list of all blogs in reverse-chronological order.
 
 <article>
 	<h2>
+		<a href="/blogs/2024-11-24-pve_scripting.html">
+			PVE Scripting
+		</a>
+	</h2>
+	<p><time datetime="2024-11-24">November 24th, 2024</time></p>
+</article>
+<article>
+	<h2>
 		<a href="/blogs/2024-10-27-diy_porkbun_ddns.html">
 			DIY Porkbun Dynamic DNS
 		</a>
