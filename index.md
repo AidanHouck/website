@@ -16,6 +16,14 @@ Below is a list of all blogs in reverse-chronological order.
 
 <article>
 	<h2>
+		<a href="/blogs/2025-01-01-nixos_rpi_quickstart.html">
+			NixOS Raspberry Pi Quickstart
+		</a>
+	</h2>
+	<p><time datetime="2025-01-01">January 1st, 2025</time></p>
+</article>
+<article>
+	<h2>
 		<a href="/blogs/2024-11-24-pve_scripting.html">
 			PVE Scripting
 		</a>
